@@ -1,0 +1,163 @@
+.prismfly-travel-section {
+  grid-template-columns: 1fr 1fr;
+}
+
+.prismfly-card {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 640px;
+  background: #F3F4EC;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.prismfly-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.prismfly-col {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.prismfly-col.prismfly-content {
+  padding-top: 120px;
+  padding-left: 120px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+}
+
+.prismfly-location {
+  font-family: 'Indivisible', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #D4491B;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+}
+
+.prismfly-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+h2 {
+  font-family: 'Indivisible', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  letter-spacing: -1%;
+  color: #292D33;
+  margin: 0.5rem 0 1rem;
+}
+
+p {
+  font-family: 'Turnip', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #6C6E71;
+  margin: 0 0 1.5rem;
+}
+
+button {
+  background-color: #292D33;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 10px 36px;
+  width: 280px;
+  height: 46px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .prismfly-card {
+    height: 100vh; 
+    margin-bottom: 0;
+    flex-direction: column;
+    max-height: none;
+    height: auto;
+    overflow: visible;
+  }
+
+  .prismfly-col.prismfly-image img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .prismfly-col.prismfly-content {
+    padding: 2rem;
+  }
+  .slick-dots {
+    padding-top: 10px;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    display: flex !important;
+    justify-content: center;
+    pointer-events: none;
+    background: #F3F4EC;
+  }
+  .slick-dots li {
+    margin: 0 10px;
+    pointer-events: auto; 
+  }
+
+  .slick-dots li button:before {
+    font-size: 0;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #DAD9D8;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .slick-dots li.slick-active button:before {
+    width: 36px;
+    height: 12px;
+    background: #D4491B;
+    border-radius: 999px;
+    position: absolute;
+    left: -15px;
+  }
+  .prismfly-location {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  body {
+    margin: 0px;
+  }
+  .slick-dotted.slick-slider {
+    margin: 0px;
+  }
+  .prismfly-travel-cards {
+    position: relative;
+  }
+}
+
+
